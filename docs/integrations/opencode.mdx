@@ -4,7 +4,7 @@ title: OpenCode
 
 [OpenCode](https://opencode.ai) is an open-source coding agent that runs in your terminal, reads your project, edits files, and runs commands.
 
-Ollama configures OpenCode to use local and cloud models, so you can work with open models from the same coding workflow.
+Ollama configures OpenCode to use local and cloud models.
 
 ## Get started
 
@@ -124,14 +124,6 @@ Add an Ollama provider to `opencode.json`:
 }
 ```
 
-<p className="manual-step-title">Configuration precedence</p>
-
-`ollama launch opencode` starts OpenCode with an inline config for the selected Ollama model. It does not overwrite `~/.config/opencode/opencode.json`; existing OpenCode settings still apply.
-
-Models defined only in `opencode.json` do not appear in the `ollama launch` model picker.
-
-See OpenCode's [config precedence](https://opencode.ai/docs/config/#precedence-order).
-
 <p className="manual-step-title">3. Run OpenCode</p>
 
 ```shell
@@ -143,3 +135,11 @@ To configure OpenCode with Ollama without starting an interactive session:
 ```shell
 ollama launch opencode --config
 ```
+
+### Configuration precedence
+
+`ollama launch opencode` starts OpenCode with an inline config for the selected Ollama model. It does not overwrite `~/.config/opencode/opencode.json`; existing OpenCode settings still apply.
+
+Models defined only in `opencode.json` do not appear in the `ollama launch` model picker.
+
+See OpenCode's [config precedence](https://opencode.ai/docs/config/#precedence-order).
